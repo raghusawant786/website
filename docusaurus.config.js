@@ -8,13 +8,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Raghunath Sawant',
   tagline: 'Quality Analyst | Agile tester | ISQTB Certified | Automation | selenium | API automation | Appium |',
-  url: 'https://github.com/raghusawant786', // Your website URL
+  url: 'https://raghunahtsawant.github.io', // Your website URL
   baseUrl: '/website/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'raghusawant786', // Usually your GitHub org/user name.
-  projectName: 'DocWebSite', // Usually your repo name.
+  projectName: 'website', // Usually your repo name.
   themes: ['@docusaurus/theme-live-codeblock'],	
   plugins: ['@docusaurus/plugin-ideal-image'],
 
