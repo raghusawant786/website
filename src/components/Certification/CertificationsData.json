@@ -1,0 +1,38 @@
+{
+
+  "certifications": [
+    {
+      "name": " Web Application Security Testing with OWASP ZAP",
+      "image": "/img/coursera_logo.png",
+      "organisation": "Issued By: Coursera Course Certificates",
+      "date": "Oct 2021"
+    },
+
+    {
+      "name": " Git Complete: The definitive, step-by-step",
+      "image": "/img/udemy_logo.jpg",
+      "organisation": "Issued By: Udemy",
+      "date": "August 2020"
+    },
+    {
+      "name": "Scrum Foundation Professional Certificate",
+      "image": "/img/scrumFoundation.png",
+      "organisation": "Issued By: CertiProf",
+      "date": "August 30, 2020"
+    }
+    ,
+    {
+      "name": "ISTQB Certified Tester Foundation Level",
+      "image": "/img/istqb.png",
+      "organisation": "Issued By: International Software Testing Qualifications Board",
+      "date": "Jan 2022"
+    },
+    {
+      "name": "Remote Work and Virtual Collaboration",
+      "image": "/img/remoteWork.jpeg",
+      "organisation": "Issued By: CertiProf",
+      "date": "April 16, 2021"
+    }
+
+  ]
+}

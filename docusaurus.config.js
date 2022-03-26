@@ -7,14 +7,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Raghunath Sawant',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  tagline: 'Quality Analyst | Agile tester | ISQTB Certified | Automation | selenium | API automation | Appium |',
+  url: 'https://github.com/raghusawant786', // Your website URL
+  baseUrl: '/website/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'raghusawant786', // Usually your GitHub org/user name.
+  projectName: 'DocWebSite', // Usually your repo name.
+  themes: ['@docusaurus/theme-live-codeblock'],	
+  plugins: ['@docusaurus/plugin-ideal-image'],
 
   presets: [
     [
@@ -43,10 +45,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Home',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/RD_logo.png',
         },
         items: [
           {
@@ -56,6 +58,12 @@ const config = {
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            position: 'left',
+            to: '/Certifications',
+            label: 'Certifications'
+          },
+
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -111,6 +119,14 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '⭐️ If you like my website , give it a star on <a href="https://github.com/raghusawant786/website"> Github</a> ⭐️',
+        backgroundColor: '#D6DBDF',
+        textColor: '#091E42',
+        isCloseable: false,
       },
     }),
 };
