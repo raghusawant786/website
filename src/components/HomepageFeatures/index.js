@@ -1,35 +1,56 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Creativity',
+    Svg: require('../../../static/img/undraw_creativity.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Creativity skills help me think out of the box and present unique solutions for challenges faced at workplace.
+        Some of the creativity skills I possess include making connections,
+        asking questions, making observations, networking, experimenting.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Problem Solving Ability',
+    Svg: require('../../../static/img/undraw_problem_solving.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+      My 'never say no' attitude and tenacious determination ensures that I don't give up easily until and unless I solve any given problem.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Team Player',
+    Svg: require('../../../static/img/undraw_team_player.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+      Along with being an individual contributor , I am also adept at collaboration and my strong interpersonal communication helps me be an excellent team player.
+      </>
+    ),
+  },
+  {
+    title: 'Decision  Making',
+    Svg: require('@site/static/img/undraw_decision.svg').default,
+    description: (
+      <>
+        Makes decisions with confidence,Demonstrate and ability to effectively influence key
+decision makers,Display firmness in making decision
+      </>
+    ),
+  },
+  {
+    title: 'Leadership',
+    Svg: require('@site/static/img/undraw_leadeship.svg').default,
+    description: (
+      <>
+        Project self-confidence, authority and enthusiasm,Demonstrate natural leadership ability,Display leadership stature
+,Demonstrates strong, dynamic leadership
+
       </>
     ),
   },
@@ -53,6 +74,13 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+      <div className="text-center" >
+                <Link
+                  className="button button--secondary button--lg"
+                  disabled >
+                  Personal Skills
+                </Link>
+              </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

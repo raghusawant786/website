@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Raghunath Sawant',
-  tagline: 'Quality Analyst | Agile tester | ISQTB Certified | Automation | selenium | API automation | Appium |',
+  tagline: 'Quality Analyst | Agile tester | ISQTB Certified | UI and API Automation |',
   url: 'https://raghunahtsawant.github.io', // Your website URL
   baseUrl: '/website/',
   onBrokenLinks: 'throw',
@@ -57,15 +57,19 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             position: 'left',
             to: '/Certifications',
             label: 'Certifications'
           },
-
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://www.linkedin.com/in/raghunath-sawant-19071994/',
+            label: 'Linkedin',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/raghusawant786',
             label: 'GitHub',
             position: 'right',
           },
@@ -88,15 +92,15 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/users/15999685/raghunath-sawant',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Linkedin',
+                href: 'https://www.linkedin.com/in/raghunath-sawant-19071994/',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Facebook',
+                href: 'https://www.facebook.com/raghunath.sawant/',
               },
             ],
           },
@@ -109,25 +113,25 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/raghusawant786',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Raghunath Sawant`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      announcementBar: {
+    /*  announcementBar: {
         id: 'support_us',
         content:
           '⭐️ If you like my website , give it a star on <a href="https://github.com/raghusawant786/website"> Github</a> ⭐️',
         backgroundColor: '#D6DBDF',
         textColor: '#091E42',
         isCloseable: false,
-      },
+    },*/
     }),
 };
 

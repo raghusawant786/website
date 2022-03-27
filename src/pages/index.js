@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import GitHubButton from 'react-github-btn';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -13,13 +14,14 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+        <div className={styles.buttons} >
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+            Know More About Me
+          </Link>  
         </div>
+        <GitHubButton href="https://github.com/raghusawant786" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Follow @ on GitHub">Follow @RaghunatSawant </GitHubButton>
       </div>
     </header>
   );
