@@ -75,8 +75,7 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
       <div className="text-center" >
-                <Link
-                  className="button button--secondary button--lg"
+         <Link className="button button--secondary button--lg"
                   disabled >
                   Personal Skills
                 </Link>

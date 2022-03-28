@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/website/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/RS_logo.jpg',
   organizationName: 'raghusawant786', // Usually your GitHub org/user name.
   projectName: 'website', // Usually your repo name.
   themes: ['@docusaurus/theme-live-codeblock'],	
@@ -48,7 +48,7 @@ const config = {
         title: 'Home',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/RD_logo.png',
+          src: 'img/RS_logo.jpg',
         },
         items: [
           {
@@ -82,7 +82,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'About Me',
                 to: '/docs/intro',
               },
             ],
