@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import GitHubButton from 'react-github-btn';
+import SocialLinks from "../components/Solidlinks/_SocialLinks";
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -21,7 +21,7 @@ function HomepageHeader() {
             Know More About Me
           </Link>  
         </div>
-        <GitHubButton href="https://github.com/raghusawant786" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Follow @ on GitHub">Follow @RaghunatSawant </GitHubButton>
+        <SocialLinks />
       </div>
     </header>
   );

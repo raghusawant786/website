@@ -1,0 +1,38 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1.2rem 0;
+  padding-left: 0.3rem;
+}
+
+.socialLinks div {
+  margin-right: 1rem;
+}
+
+.socialLinks a {
+  font-size: 1rem;
+  width: 100%;
+  color: rgb(26, 17, 3);
+}
+
+.socialLinks a:hover {
+  color: rgba(172, 131, 55, 0.671);
+}
+
+.socialLinks a:focus, .socialLinksocialLinksList a:active {
+  color: rgb(113, 202, 77);
+}
+
+@media screen and (max-width: 966px) {
+  .socialLinks {
+    justify-content: space-between;
+    padding: 0 1.6rem;
+  }
+
+  .socialLinks div {
+    margin-right: 0;
+  }
+}

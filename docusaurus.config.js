@@ -64,8 +64,8 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://www.linkedin.com/in/raghunath-sawant-19071994/',
-            label: 'Linkedin',
+            href: 'https://drive.google.com/file/d/13T_LPK0HvH0noA0GtM7o4q2CZ48H2G6F/view?usp=sharing',
+            label: 'Resume',
             position: 'right',
           },
           {
@@ -84,6 +84,10 @@ const config = {
               {
                 label: 'About Me',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Resume',
+                href: 'https://drive.google.com/file/d/13T_LPK0HvH0noA0GtM7o4q2CZ48H2G6F/view',
               },
             ],
           },
