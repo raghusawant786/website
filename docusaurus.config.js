@@ -63,6 +63,7 @@ const config = {
             label: 'Certifications'
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/games', label: 'Games', position: 'left'},
           {
             href: 'https://drive.google.com/file/d/13T_LPK0HvH0noA0GtM7o4q2CZ48H2G6F/view?usp=sharing',
             label: 'Resume',

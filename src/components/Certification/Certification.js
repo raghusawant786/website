@@ -24,7 +24,6 @@ date}) {
                 <h4 className={styles.CertificationDuration}>{organisation}</h4>
              </article>
   );
-
 };
 export default function CertificationList() {
 const {certifications}=Data

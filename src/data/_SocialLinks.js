@@ -5,6 +5,7 @@ const socialLinks = [
   {
     faIcon: faLinkedin,
     alt: "Linkedin",
+    classname: 'fab fa-linkedin fa-fw',
     url: "https://www.linkedin.com/in/raghunath-sawant-19071994/",
   },
   {
