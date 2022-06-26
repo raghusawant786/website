@@ -8,7 +8,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-image: url("/img/IMG_DashboardBack.jpg");
+  background-image: url("../../static/img/IMG_DashboardBack.jpg");
   }
 
 @media screen and (max-width: 996px) {
