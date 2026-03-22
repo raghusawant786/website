@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /.git/
+
+# Allow search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://raghunahtsawant.github.io/website/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
