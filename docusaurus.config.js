@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Raghunath Sawant',
-  tagline: 'Quality Analyst | Agile tester | ISQTB Certified | UI and API Automation |',
+  tagline: 'Lead QA Engineer | 9+ Years BFSI | BDD/Serenity | Full-Stack Testing | AI-Powered Quality',
   url: 'https://raghunahtsawant.github.io', // Your website URL
   baseUrl: '/website/',
   onBrokenLinks: 'throw',
@@ -16,7 +16,9 @@ const config = {
   organizationName: 'raghusawant786', // Usually your GitHub org/user name.
   projectName: 'website', // Usually your repo name.
   themes: ['@docusaurus/theme-live-codeblock'],	
-  plugins: ['@docusaurus/plugin-ideal-image'],
+  plugins: [
+    '@docusaurus/plugin-ideal-image',
+  ],
 
   presets: [
     [
@@ -44,6 +46,24 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadataHead: [
+        ['meta', { name: 'description', content: 'Raghunath Sawant - Lead QA Engineer | 9+ Years BFSI Domain | Serenity BDD | Full-Stack Test Automation | Team Leadership | SS&C Technologies' }],
+        ['meta', { property: 'og:title', content: 'Raghunath Sawant - Automation Engineer Portfolio' }],
+        ['meta', { property: 'og:type', content: 'website' }],
+        ['meta', { property: 'og:image', content: '/img/profile_img.jpeg' }],
+        ['meta', { property: 'og:url', content: 'https://raghunahtsawant.github.io/website/' }],
+        ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+        ['meta', { name: 'twitter:title', content: 'Raghunath Sawant - QA Engineer' }],
+        ['meta', { name: 'twitter:description', content: 'Portfolio showcasing 5+ years of QA automation experience' }],
+        // Google Analytics 4 - Replace G-XXXXXXX with your Measurement ID
+        ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX' }],
+        ['script', {}, "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-XXXXXXX', { 'anonymize_ip': true });"],
+      ],
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         title: 'Home',
         logo: {

@@ -6,25 +6,35 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #b982e0;
+  --ifm-color-primary-dark: #a76ccd;
+  --ifm-color-primary-darker: #9f5fc0;
+  --ifm-color-primary-darkest: #8550a8;
+  --ifm-color-primary-light: #c89aed;
+  --ifm-color-primary-lighter: #d4b1f5;
+  --ifm-color-primary-lightest: #e0c9fa;
   --ifm-code-font-size: 95%;
+  
+  /* Accessibility-focused spacing */
+  --ifm-line-height-base: 1.6;
+  --ifm-heading-line-height: 1.4;
+  
+  /* Modern color scheme */
+  --secondary-color: #64c8c8;
+  --accent-color: #ffa726;
+  --gradient-1: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  --gradient-2: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #d4b1f5;
+  --ifm-color-primary-dark: #c89aed;
+  --ifm-color-primary-darker: #b982e0;
+  --ifm-color-primary-darkest: #9f5fc0;
+  --ifm-color-primary-light: #e0c9fa;
+  --ifm-color-primary-lighter: #ead6ff;
+  --ifm-color-primary-lightest: #f5e6ff;
 }
 
 .docusaurus-highlight-code-line {
@@ -36,4 +46,420 @@
 
 [data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   ACCESSIBILITY UTILITIES & IMPROVEMENTS
+   ======================================== */
+
+/* Improved focus visible states for all interactive elements */
+:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Better button accessibility */
+button,
+a.button {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+button:focus-visible,
+a.button:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Link accessibility improvements */
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #6c3fa6;
+}
+
+/* Improved contrast for text */
+body {
+  color: #17202a;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+[data-theme='dark'] body {
+  color: #e0e0e0;
+  background-color: #1a1a1a;
+}
+
+/* Headings with better hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Better readability for lists */
+ul, ol {
+  list-style-position: outside;
+  margin-left: 2rem;
+  line-height: 1.8;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Code block accessibility */
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+[data-theme='dark'] pre {
+  background-color: #2a2a2a;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 2px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+[data-theme='dark'] code {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* Visually hide content but keep it accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Form field improvements */
+input,
+textarea,
+select {
+  min-height: 44px;
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(185, 130, 224, 0.1);
+}
+
+/* Responsive text sizing for better readability */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+  body {
+    font-weight: 500;
+  }
+
+  button, a.button {
+    border: 2px solid currentColor;
+    font-weight: 700;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+}
+
+/* ========================================
+   MODERN UI ENHANCEMENTS
+   ======================================== */
+
+/* Smooth transitions for all elements */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Enhanced table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+table th {
+  background: var(--gradient-1);
+  color: white;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+[data-theme='dark'] table td {
+  border-bottom: 1px solid #444;
+}
+
+table tbody tr:hover {
+  background-color: rgba(185, 130, 224, 0.05);
+}
+
+[data-theme='dark'] table tbody tr:hover {
+  background-color: rgba(185, 130, 224, 0.1);
+}
+
+/* Enhanced cards/section styling */
+.card {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(185, 130, 224, 0.15);
+}
+
+[data-theme='dark'] .card {
+  border-color: #444;
+}
+
+/* Enhanced button states */
+.button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease !important;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.button:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Blockquote styling */
+blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  padding-left: 1rem;
+  margin-left: 0;
+  color: #666;
+  font-style: italic;
+  background: rgba(185, 130, 224, 0.05);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+[data-theme='dark'] blockquote {
+  color: #ccc;
+  background: rgba(185, 130, 224, 0.1);
+}
+
+/* Enhanced links styling */
+a:not(.button) {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  position: relative;
+}
+
+a:not(.button):hover {
+  text-decoration: underline;
+}
+
+a:not(.button)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-1);
+  transition: width 0.3s ease;
+}
+
+a:not(.button):hover::after {
+  width: 100%;
+}
+
+/* Badge/Label styling */
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: var(--gradient-1);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Alert/Admonition improvements */
+.alert {
+  border-radius: 8px;
+  border-left: 4px solid;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.alert--info {
+  border-left-color: var(--ifm-color-primary);
+  background: rgba(185, 130, 224, 0.1);
+}
+
+.alert--success {
+  border-left-color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.alert--warning {
+  border-left-color: #ffa726;
+  background: rgba(255, 167, 38, 0.1);
+}
+
+.alert--danger {
+  border-left-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading state for buttons */
+.button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Image improvements */
+img {
+  border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar improvements */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #ffffff, #f8f9ff);
+}
+
+[data-theme='dark'] .navbar {
+  background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+}
+
+/* Footer improvements */
+.footer {
+  background: #f8f9ff;
+  border-top: 1px solid #e0e0e0;
+}
+
+[data-theme='dark'] .footer {
+  background: #1a1a1a;
+  border-top: 1px solid #444;
+}
+
+/* DocSearch styling */
+.DocSearch {
+  --docsearch-primary-color: var(--ifm-color-primary);
 }

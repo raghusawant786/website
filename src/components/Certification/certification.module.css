@@ -19,72 +19,169 @@
 .Certification {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.2fr;
-  gap: 5px 5px;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
   grid-template-areas:
-    'ProjectImage'
-    'ProjectInfo';
+    'CertificationImage'
+    'CertificationInfo'
+    'CertificationOrganization';
   border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 5px;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
   text-align: center;
-  box-shadow: 0px 0px 10px #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  min-height: 280px;
+  background-color: #fff;
+  /* Better contrast ratio for accessibility */
+  color: #17202a;
 }
 
 .Certification:hover {
-  box-shadow: 0px 0px 15px #ccc;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.Certification:focus-within {
+  outline: 3px solid #2e8555;
+  outline-offset: 2px;
 }
 
 .CertificationImage {
-  grid-area: ProjectImage;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  object-fit: cover;
-}
-
-.CertificationInfo {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.2fr;
-  gap: 5px 0px;
-  grid-template-areas:
-    'ProjectTitle'
-    'ProjectDescription';
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-  grid-area: ProjectInfo;
-}
-
-.CertificationTitle {
-  grid-area: ProjectTitle;
-  text-transform: uppercase;
-  text-decoration:underline;
-}
-
-.CertificationDuration {
-
-  text-decoration:underline;
-  text-decoration:color;
-  text-decoration-style:solid
-}
-
-
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.buttons {
+  grid-area: CertificationImage;
   display: flex;
   align-items: center;
   justify-content: center;
-  color:blue
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.CertificationImage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.CertificationInfo {
+  grid-area: CertificationInfo;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.CertificationTitle {
+  grid-area: CertificationTitle;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #17202a;
+  line-height: 1.4;
+  /* Improved contrast */
+  word-wrap: break-word;
+}
+
+.CertificationDuration {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+  margin: 0;
+  /* Time formatting */
+  font-style: italic;
+}
+
+.CertificationOrganization {
+  grid-area: CertificationOrganization;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.noCertifications {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  padding: 2rem;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .Certification {
+    background-color: #1a1a1a;
+    border-color: #444;
+    color: #e0e0e0;
+  }
+
+  .Certification:hover {
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .CertificationImage {
+    background-color: #2a2a2a;
+  }
+
+  .CertificationTitle {
+    color: #e0e0e0;
+  }
+
+  .CertificationDuration {
+    color: #aaa;
+  }
+
+  .CertificationOrganization {
+    color: #999;
+  }
+
+  .noCertifications {
+    color: #aaa;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .Certification {
+    min-height: 260px;
+  }
+
+  .CertificationTitle {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .CertificationsContainer {
+    margin: 15px;
+  }
+
+  .Certification {
+    margin: 15px auto;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  .Certification {
+    border-width: 2px;
+  }
+
+  .CertificationTitle {
+    font-weight: 700;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .Certification {
+    transition: none;
+  }
+
+  .Certification:hover {
+    transform: none;
+  }
 }

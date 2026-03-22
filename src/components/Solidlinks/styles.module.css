@@ -1,29 +1,131 @@
 /* stylelint-disable docusaurus/copyright-header */
 
-.socialLinks {
+.socialLinksNav {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.socialLinksList {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 1.2rem 0;
-  padding-left: 0.3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
 }
 
-.socialLinks div {
-  margin-right: 1rem;
+.socialLinkItem {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.socialLinks a {
-  font-size: 1rem;
-  width: 100%;
-  color: rgb(26, 17, 3);
+.socialLinkAnchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(46, 133, 85, 0.1);
+  color: #17202a;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 2px solid transparent;
+  position: relative;
 }
 
-.socialLinks a:hover {
-  color: rgba(172, 131, 55, 0.671);
+.socialLinkAnchor:hover {
+  background-color: #2e8555;
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(46, 133, 85, 0.3);
 }
 
-.socialLinks a:focus, .socialLinksocialLinksList a:active {
-  color: rgb(113, 202, 77);
+.socialLinkAnchor:focus {
+  outline: none;
+  border-color: #2e8555;
+  box-shadow: 0 0 0 3px rgba(46, 133, 85, 0.1);
+}
+
+.socialLinkAnchor:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(46, 133, 85, 0.2);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .socialLinkAnchor {
+    background-color: rgba(46, 133, 85, 0.2);
+    color: #e0e0e0;
+  }
+
+  .socialLinkAnchor:hover {
+    background-color: #33925d;
+    box-shadow: 0 8px 16px rgba(51, 146, 93, 0.3);
+  }
+
+  .socialLinkAnchor:focus {
+    border-color: #33925d;
+    box-shadow: 0 0 0 3px rgba(51, 146, 93, 0.2);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .socialLinksList {
+    gap: 1rem;
+  }
+
+  .socialLinkAnchor {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .socialLinksList {
+    gap: 0.75rem;
+  }
+
+  .socialLinkAnchor {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  .socialLinkAnchor {
+    border-width: 2px;
+    border-color: currentColor;
+  }
+
+  .socialLinkAnchor:focus {
+    outline: 3px solid #2e8555;
+    outline-offset: 2px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .socialLinkAnchor {
+    transition: none;
+  }
+
+  .socialLinkAnchor:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .socialLinksNav {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 966px) {
