@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[358],{9283(e){e.exports=JSON.parse('{"label":"QA Best Practices","permalink":"/website/blog/tags/qa-best-practices","allTagsPath":"/website/blog/tags","count":1}')}}]);

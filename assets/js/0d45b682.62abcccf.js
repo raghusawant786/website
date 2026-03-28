@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[704],{4197(t){t.exports=JSON.parse('{"label":"Test Automation","permalink":"/website/blog/tags/test-automation","allTagsPath":"/website/blog/tags","count":1}')}}]);
