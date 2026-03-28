@@ -32,9 +32,9 @@ export default function ExperienceTimeline() {
       color: '#64c8c8',
     },
     {
-      company: 'Previous Experience',
+      company: 'Qualitykiosk Technologies',
       role: 'Quality Analyst | Senior QA',
-      period: '2015 – Apr 2023',
+      period: 'Aug 2016 – Apr 2023',
       logo: '📊',
       achievements: [
         '5+ years BFSI domain expertise',

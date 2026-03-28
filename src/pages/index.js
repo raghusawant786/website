@@ -9,6 +9,8 @@ import ErrorBoundary from '@site/src/components/ErrorBoundary';
 import ProfessionalStats from '@site/src/components/ProfessionalStats';
 import ExperienceTimeline from '@site/src/components/ExperienceTimeline';
 import TechSkillsShowcase from '@site/src/components/TechSkillsShowcase';
+import ProjectShowcase from '@site/src/components/ProjectShowcase';
+import Testimonials from '@site/src/components/Testimonials';
 
 /**
  * Homepage Header Component
@@ -87,6 +89,12 @@ export default function Home() {
         </ErrorBoundary>
         <ErrorBoundary>
           <TechSkillsShowcase />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <ProjectShowcase />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Testimonials />
         </ErrorBoundary>
         <ErrorBoundary>
           <ExperienceTimeline />

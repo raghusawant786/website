@@ -14,6 +14,7 @@ export default function TechSkillsShowcase() {
     { id: 'languages', label: '💻 Languages', color: '#ffa726' },
     { id: 'devops', label: '🛠️ DevOps/CI-CD', color: '#ff7675' },
     { id: 'databases', label: '🗄️ Databases', color: '#5dade2' },
+    { id: 'ai', label: '🤖 AI/ML', color: '#9f7aea' },
   ];
 
   const skills = [
@@ -98,6 +99,42 @@ export default function TechSkillsShowcase() {
     {
       category: 'databases',
       label: 'Oracle DB',
+      level: 'Proficient',
+      proficiency: 70,
+    },
+    {
+      category: 'ai',
+      label: 'Machine Learning (TensorFlow/Scikit-learn)',
+      level: 'Proficient',
+      proficiency: 75,
+    },
+    {
+      category: 'ai',
+      label: 'AI-Powered Test Generation (Testim)',
+      level: 'Advanced',
+      proficiency: 80,
+    },
+    {
+      category: 'ai',
+      label: 'Visual AI Testing (Applitools)',
+      level: 'Advanced',
+      proficiency: 85,
+    },
+    {
+      category: 'ai',
+      label: 'LLM Integration & ChatGPT API',
+      level: 'Proficient',
+      proficiency: 75,
+    },
+    {
+      category: 'ai',
+      label: 'Predictive Defect Analysis',
+      level: 'Advanced',
+      proficiency: 80,
+    },
+    {
+      category: 'ai',
+      label: 'Natural Language Processing (NLP)',
       level: 'Proficient',
       proficiency: 70,
     },

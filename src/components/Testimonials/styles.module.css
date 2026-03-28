@@ -1,0 +1,241 @@
+.testimonialSection {
+  padding: 4rem 0;
+  background: white;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonialTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.testimonialSubtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.testimonialCard {
+  background: white;
+  border-radius: 12px;
+  border-top: 4px solid #b982e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(185, 130, 224, 0.15);
+}
+
+.testimonialCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(185, 130, 224, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.starRating {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: #333;
+  margin: 1rem 0;
+  padding: 0;
+  line-height: 1.8;
+  border-left: 3px solid #b982e0;
+  padding-left: 1rem;
+}
+
+.authorSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  position: relative;
+  z-index: 1;
+}
+
+.authorIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.authorInfo {
+  flex: 1;
+}
+
+.authorName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #17202a;
+  margin: 0;
+}
+
+.authorTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7d8fa3;
+  margin: 0.2rem 0 0 0;
+}
+
+.authorCompany {
+  font-size: 0.8rem;
+  color: #999;
+  margin: 0.2rem 0 0 0;
+}
+
+.quoteIcon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 4rem;
+  opacity: 0.1;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.ctaBox {
+  background: linear-gradient(135deg, #e0c9fa 0%, #c9f0f5 100%);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.ctaBox h3 {
+  font-size: 1.5rem;
+  color: #17202a;
+  margin: 0 0 0.5rem 0;
+}
+
+.ctaBox p {
+  color: #555;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.05rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(185, 130, 224, 0.3);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .testimonialSection {
+    background: #1a1a1a;
+  }
+
+  .testimonialTitle {
+    color: #e0e0e0;
+  }
+
+  .testimonialSubtitle {
+    color: #aaa;
+  }
+
+  .testimonialCard {
+    background: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .testimonialCard:hover {
+    box-shadow: 0 12px 24px rgba(185, 130, 224, 0.3);
+  }
+
+  .quote {
+    color: #ddd;
+  }
+
+  .authorName {
+    color: #e0e0e0;
+  }
+
+  .ctaBox {
+    background: linear-gradient(135deg, rgba(185, 130, 224, 0.2) 0%, rgba(100, 200, 200, 0.2) 100%);
+  }
+
+  .ctaBox h3 {
+    color: #e0e0e0;
+  }
+
+  .ctaBox p {
+    color: #aaa;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .testimonialTitle {
+    font-size: 2rem;
+  }
+
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonialCard {
+    padding: 1.5rem;
+  }
+
+  .ctaBox {
+    padding: 2rem 1.5rem;
+  }
+
+  .ctaBox h3 {
+    font-size: 1.3rem;
+  }
+}

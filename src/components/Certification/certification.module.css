@@ -7,44 +7,54 @@
   align-items: flex-start;
   align-content: space-between;
   margin: 30px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 3rem 0;
+  border-radius: 12px;
 }
 
 .CertificationsTitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: block;
+  text-align: center;
+  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .Certification {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
-  gap: 10px;
+  gap: 12px;
   grid-template-areas:
     'CertificationImage'
     'CertificationInfo'
     'CertificationOrganization';
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  margin: 15px;
+  padding: 20px;
   text-align: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  min-height: 280px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  min-height: 300px;
   background-color: #fff;
-  /* Better contrast ratio for accessibility */
+  flex: 0 1 calc(33.333% - 30px);
+  max-width: calc(33.333% - 30px);
   color: #17202a;
 }
 
 .Certification:hover {
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-4px);
+  box-shadow: 0px 12px 24px rgba(185, 130, 224, 0.15);
+  transform: translateY(-8px);
+  border-color: #b982e0;
 }
 
 .Certification:focus-within {
-  outline: 3px solid #2e8555;
+  outline: 3px solid #b982e0;
   outline-offset: 2px;
 }
 
@@ -54,43 +64,80 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100px;
+  height: 120px;
   overflow: hidden;
-  background-color: #f5f5f5;
-  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(185, 130, 224, 0.05) 0%, rgba(100, 200, 200, 0.05) 100%);
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
 }
 
 .CertificationImage img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  padding: 10px;
+}
+
+.CertificationBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 8px;
+  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.CertificationBadge:hover {
+  transform: scale(1.05);
+}
+
+.BadgeIcon {
+  font-size: 3rem;
+  line-height: 1;
+  display: block;
+}
+
+.BadgeText {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .CertificationInfo {
   grid-area: CertificationInfo;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
+  flex: 1;
 }
 
 .CertificationTitle {
   grid-area: CertificationTitle;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   margin: 0;
   color: #17202a;
   line-height: 1.4;
-  /* Improved contrast */
   word-wrap: break-word;
 }
 
 .CertificationDuration {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #555;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7d8fa3;
   margin: 0;
-  /* Time formatting */
   font-style: italic;
+  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .CertificationOrganization {
@@ -99,6 +146,8 @@
   color: #666;
   margin: 0;
   line-height: 1.4;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
 }
 
 .noCertifications {
@@ -110,18 +159,28 @@
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
+  .CertificationsContainer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  }
+
   .Certification {
-    background-color: #1a1a1a;
+    background-color: #2a2a2a;
     border-color: #444;
     color: #e0e0e0;
   }
 
   .Certification:hover {
-    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 12px 24px rgba(185, 130, 224, 0.3);
+    border-color: #5dade2;
   }
 
   .CertificationImage {
-    background-color: #2a2a2a;
+    background: linear-gradient(135deg, rgba(185, 130, 224, 0.1) 0%, rgba(100, 200, 200, 0.1) 100%);
+    border-color: #555;
+  }
+
+  .CertificationBadge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
 
   .CertificationTitle {
@@ -134,6 +193,7 @@
 
   .CertificationOrganization {
     color: #999;
+    border-color: #555;
   }
 
   .noCertifications {
@@ -141,10 +201,12 @@
   }
 }
 
-/* Responsive Design */
+/* Tablet - 2 columns */
 @media screen and (max-width: 1200px) {
   .Certification {
-    min-height: 260px;
+    flex: 0 1 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+    min-height: 280px;
   }
 
   .CertificationTitle {
@@ -152,25 +214,66 @@
   }
 }
 
+/* Mobile - 1 column */
 @media screen and (max-width: 768px) {
   .CertificationsContainer {
     margin: 15px;
+    padding: 2rem 0;
   }
 
   .Certification {
-    margin: 15px auto;
-    min-width: 100%;
+    flex: 0 1 100%;
     max-width: 100%;
+    margin: 10px auto;
+    min-height: 260px;
+  }
+
+  .CertificationImage {
+    height: 100px;
+  }
+
+  .CertificationTitle {
+    font-size: 0.95rem;
+  }
+
+  .CertificationDuration {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+  .CertificationsContainer {
+    margin: 10px;
+    padding: 1.5rem 0;
+  }
+
+  .Certification {
+    margin: 8px auto;
+    padding: 15px;
+    min-height: 240px;
+  }
+
+  .CertificationImage {
+    height: 90px;
+  }
+
+  .CertificationTitle {
+    font-size: 0.9rem;
   }
 }
 
 /* High Contrast Mode Support */
 @media (prefers-contrast: more) {
   .Certification {
-    border-width: 2px;
+    border-width: 3px;
   }
 
   .CertificationTitle {
+    font-weight: 800;
+  }
+
+  .CertificationDuration {
     font-weight: 700;
   }
 }
@@ -185,3 +288,4 @@
     transform: none;
   }
 }
+

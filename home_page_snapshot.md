@@ -1,0 +1,255 @@
+- generic [ref=e2]:
+  - region "Skip to main content" [ref=e3]:
+    - link "Skip to main content" [ref=e4] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - navigation "Main" [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link "My Site Logo Home" [ref=e8] [cursor=pointer]:
+          - /url: /website/
+          - img "My Site Logo" [ref=e10]
+          - generic [ref=e11]: Home
+        - link "About Me" [ref=e12] [cursor=pointer]:
+          - /url: /website/docs/intro
+        - link "Certifications" [ref=e13] [cursor=pointer]:
+          - /url: /website/Certifications
+        - link "Blog" [ref=e14] [cursor=pointer]:
+          - /url: /website/blog
+      - generic [ref=e15]:
+        - link "Resume" [ref=e16] [cursor=pointer]:
+          - /url: https://drive.google.com/file/d/13T_LPK0HvH0noA0GtM7o4q2CZ48H2G6F/view?usp=sharing
+          - text: Resume
+          - img [ref=e17]
+        - link "GitHub" [ref=e19] [cursor=pointer]:
+          - /url: https://github.com/raghusawant786
+          - text: GitHub
+          - img [ref=e20]
+        - button "Switch between dark and light mode (currently light mode)" [ref=e23] [cursor=pointer]:
+          - img [ref=e24]
+  - generic [ref=e27]:
+    - banner [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - heading "Raghunath Sawant" [level=1] [ref=e31]
+          - paragraph [ref=e32]: Lead QA Engineer | 9+ Years BFSI | BDD/Serenity | Full-Stack Testing | AI-Powered Quality
+          - generic [ref=e33]:
+            - link "Navigate to hire me section" [ref=e34] [cursor=pointer]:
+              - /url: /website/docs/hireMe
+              - text: 💼 Available for Opportunities
+            - link "Download resume" [ref=e35] [cursor=pointer]:
+              - /url: /website/resume.pdf
+              - text: 📄 Download Resume
+          - navigation "Social media links" [ref=e36]:
+            - navigation "Social media links" [ref=e37]:
+              - list [ref=e38]:
+                - listitem [ref=e39]:
+                  - link "Connect on Linkedin" [ref=e40] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/raghunath-sawant-19071994/
+                    - img "Linkedin" [ref=e41]
+                - listitem [ref=e43]:
+                  - link "Connect on GitHub" [ref=e44] [cursor=pointer]:
+                    - /url: https://github.com/raghusawant786
+                    - img "GitHub" [ref=e45]
+                - listitem [ref=e47]:
+                  - link "Connect on Facebook" [ref=e48] [cursor=pointer]:
+                    - /url: https://www.facebook.com/raghunath.sawant/
+                    - img "Facebook" [ref=e49]
+                - listitem [ref=e51]:
+                  - link "Connect on Email" [ref=e52] [cursor=pointer]:
+                    - /url: mailto:raghusawant786@gmail.com
+                    - img "Email" [ref=e53]
+        - generic [ref=e56]:
+          - generic [ref=e57]: 🚀
+          - paragraph [ref=e58]: Lead QA Engineer Building Enterprise Testing Solutions
+    - main [ref=e59]:
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: 📊
+          - generic [ref=e65]: 9+
+          - generic [ref=e66]: Years BFSI
+          - generic [ref=e67]: Domain Expertise
+        - generic [ref=e68]:
+          - generic [ref=e69]: 🎯
+          - generic [ref=e70]: 90%
+          - generic [ref=e71]: UI Coverage
+          - generic [ref=e72]: Automation Excellence
+        - generic [ref=e73]:
+          - generic [ref=e74]: 🛠️
+          - generic [ref=e75]: 15+
+          - generic [ref=e76]: Tech Tools
+          - generic [ref=e77]: Mastered
+        - generic [ref=e78]:
+          - generic [ref=e79]: 👥
+          - generic [ref=e80]: 8+
+          - generic [ref=e81]: Team Led
+          - generic [ref=e82]: QA Engineers
+        - generic [ref=e83]:
+          - generic [ref=e84]: 📉
+          - generic [ref=e85]: 30%
+          - generic [ref=e86]: Defect Rate
+          - generic [ref=e87]: Reduction Achieved
+        - generic [ref=e88]:
+          - generic [ref=e89]: 🏆
+          - generic [ref=e90]: 100+
+          - generic [ref=e91]: Certifications
+          - generic [ref=e92]: "& Trainings"
+      - generic [ref=e94]:
+        - heading "Technical Expertise" [level=2] [ref=e95]
+        - generic [ref=e96]:
+          - button "All Skills" [ref=e97] [cursor=pointer]
+          - button "🎯 Testing" [ref=e98] [cursor=pointer]
+          - button "🔧 Automation" [ref=e99] [cursor=pointer]
+          - button "💻 Languages" [ref=e100] [cursor=pointer]
+          - button "🛠️ DevOps/CI-CD" [ref=e101] [cursor=pointer]
+          - button "🗄️ Databases" [ref=e102] [cursor=pointer]
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - heading "BDD/Serenity" [level=3] [ref=e106]
+              - generic [ref=e107]: Expert
+            - paragraph [ref=e110]: 95% Proficiency
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - heading "Cucumber/Gherkin" [level=3] [ref=e113]
+              - generic [ref=e114]: Expert
+            - paragraph [ref=e117]: 90% Proficiency
+          - generic [ref=e118]:
+            - generic [ref=e119]:
+              - heading "API Testing" [level=3] [ref=e120]
+              - generic [ref=e121]: Advanced
+            - paragraph [ref=e124]: 85% Proficiency
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - heading "Selenium WebDriver" [level=3] [ref=e127]
+              - generic [ref=e128]: Expert
+            - paragraph [ref=e131]: 95% Proficiency
+          - generic [ref=e132]:
+            - generic [ref=e133]:
+              - heading "Appium" [level=3] [ref=e134]
+              - generic [ref=e135]: Advanced
+            - paragraph [ref=e138]: 80% Proficiency
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - heading "Rest Assured" [level=3] [ref=e141]
+              - generic [ref=e142]: Advanced
+            - paragraph [ref=e145]: 85% Proficiency
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - heading "Java" [level=3] [ref=e148]
+              - generic [ref=e149]: Advanced
+            - paragraph [ref=e152]: 90% Proficiency
+          - generic [ref=e153]:
+            - generic [ref=e154]:
+              - heading "JavaScript" [level=3] [ref=e155]
+              - generic [ref=e156]: Proficient
+            - paragraph [ref=e159]: 75% Proficiency
+          - generic [ref=e160]:
+            - generic [ref=e161]:
+              - heading "Python" [level=3] [ref=e162]
+              - generic [ref=e163]: Proficient
+            - paragraph [ref=e166]: 70% Proficiency
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - heading "Jenkins" [level=3] [ref=e169]
+              - generic [ref=e170]: Advanced
+            - paragraph [ref=e173]: 85% Proficiency
+          - generic [ref=e174]:
+            - generic [ref=e175]:
+              - heading "Git/GitHub" [level=3] [ref=e176]
+              - generic [ref=e177]: Advanced
+            - paragraph [ref=e180]: 90% Proficiency
+          - generic [ref=e181]:
+            - generic [ref=e182]:
+              - heading "Docker" [level=3] [ref=e183]
+              - generic [ref=e184]: Proficient
+            - paragraph [ref=e187]: 75% Proficiency
+          - generic [ref=e188]:
+            - generic [ref=e189]:
+              - heading "MySQL/PostgreSQL" [level=3] [ref=e190]
+              - generic [ref=e191]: Advanced
+            - paragraph [ref=e194]: 85% Proficiency
+          - generic [ref=e195]:
+            - generic [ref=e196]:
+              - heading "Oracle DB" [level=3] [ref=e197]
+              - generic [ref=e198]: Proficient
+            - paragraph [ref=e201]: 70% Proficiency
+      - generic [ref=e203]:
+        - heading "Career Timeline" [level=2] [ref=e204]
+        - generic [ref=e205]:
+          - generic [ref=e206]:
+            - generic [ref=e208]: 🏢
+            - generic [ref=e210]:
+              - generic [ref=e211]:
+                - heading "Lead Software QA Engineer" [level=3] [ref=e212]
+                - paragraph [ref=e213]: SS&C Technologies
+                - generic [ref=e214]: Oct 2024 – Present
+              - list [ref=e215]:
+                - listitem [ref=e216]: ✓ Lead QA team with 90% UI automation coverage
+                - listitem [ref=e217]: ✓ Implemented BDD/Serenity architecture
+                - listitem [ref=e218]: ✓ IRS/DOL compliance testing & automation
+          - generic [ref=e219]:
+            - generic [ref=e221]: 🛠️
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - heading "Senior Quality Engineer" [level=3] [ref=e225]
+                - paragraph [ref=e226]: Honeywell International
+                - generic [ref=e227]: Apr 2023 – Oct 2024
+              - list [ref=e228]:
+                - listitem [ref=e229]: ✓ 85%+ test coverage with TestNG/POM
+                - listitem [ref=e230]: ✓ 100+ daily tests execution
+                - listitem [ref=e231]: ✓ 60+ visual regressions detected & fixed
+          - generic [ref=e232]:
+            - generic [ref=e234]: 📊
+            - generic [ref=e236]:
+              - generic [ref=e237]:
+                - heading "Quality Analyst | Senior QA" [level=3] [ref=e238]
+                - paragraph [ref=e239]: Previous Experience
+                - generic [ref=e240]: 2015 – Apr 2023
+              - list [ref=e241]:
+                - listitem [ref=e242]: ✓ 5+ years BFSI domain expertise
+                - listitem [ref=e243]: ✓ Selenium, API testing, automation
+                - listitem [ref=e244]: ✓ Team leadership & mentoring
+  - contentinfo [ref=e245]:
+    - generic [ref=e246]:
+      - generic [ref=e247]:
+        - generic [ref=e248]:
+          - generic [ref=e249]: Docs
+          - list [ref=e250]:
+            - listitem [ref=e251]:
+              - link "About Me" [ref=e252] [cursor=pointer]:
+                - /url: /website/docs/intro
+            - listitem [ref=e253]:
+              - link "Resume" [ref=e254] [cursor=pointer]:
+                - /url: https://drive.google.com/file/d/13T_LPK0HvH0noA0GtM7o4q2CZ48H2G6F/view
+                - text: Resume
+                - img [ref=e255]
+        - generic [ref=e257]:
+          - generic [ref=e258]: Community
+          - list [ref=e259]:
+            - listitem [ref=e260]:
+              - link "Stack Overflow" [ref=e261] [cursor=pointer]:
+                - /url: https://stackoverflow.com/users/15999685/raghunath-sawant
+                - text: Stack Overflow
+                - img [ref=e262]
+            - listitem [ref=e264]:
+              - link "Linkedin" [ref=e265] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/raghunath-sawant-19071994/
+                - text: Linkedin
+                - img [ref=e266]
+            - listitem [ref=e268]:
+              - link "Facebook" [ref=e269] [cursor=pointer]:
+                - /url: https://www.facebook.com/raghunath.sawant/
+                - text: Facebook
+                - img [ref=e270]
+        - generic [ref=e272]:
+          - generic [ref=e273]: More
+          - list [ref=e274]:
+            - listitem [ref=e275]:
+              - link "Blog" [ref=e276] [cursor=pointer]:
+                - /url: /website/blog
+            - listitem [ref=e277]:
+              - link "GitHub" [ref=e278] [cursor=pointer]:
+                - /url: https://github.com/raghusawant786
+                - text: GitHub
+                - img [ref=e279]
+      - generic [ref=e282]: Copyright © 2026 Raghunath Sawant
