@@ -47,15 +47,15 @@
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .skillCard {
   background: white;
   border: 1px solid #f0f0f0;
   border-radius: 10px;
-  padding: 1.8rem;
+  padding: 0.8rem;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -70,47 +70,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.2rem;
-  gap: 1rem;
+  margin-bottom: 0.6rem;
+  gap: 0.5rem;
 }
 
 .skillName {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #17202a;
   margin: 0;
 }
 
 .skillLevel {
-  font-size: 0.75rem;
-  padding: 0.4rem 0.8rem;
+  font-size: 0.65rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 4px;
   color: white;
   font-weight: 600;
   white-space: nowrap;
 }
 
-.progressBar {
-  height: 8px;
-  background: #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 0.8rem;
-}
 
-.progressFill {
-  height: 100%;
-  background: linear-gradient(90deg, #b982e0 0%, #64c8c8 100%);
-  border-radius: 10px;
-  transition: width 0.5s ease;
-}
-
-.proficiency {
-  font-size: 0.85rem;
-  color: #7d8fa3;
-  margin: 0;
-  font-weight: 500;
-}
 
 @media (max-width: 768px) {
   .skillsTitle {

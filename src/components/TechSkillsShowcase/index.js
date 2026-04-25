@@ -20,13 +20,13 @@ export default function TechSkillsShowcase() {
   const skills = [
     {
       category: 'testing',
-      label: 'BDD/Serenity',
+      label: 'Serenity',
       level: 'Expert',
       proficiency: 95,
     },
     {
       category: 'testing',
-      label: 'Cucumber/Gherkin',
+      label: 'Cucumber',
       level: 'Expert',
       proficiency: 90,
     },
@@ -92,7 +92,7 @@ export default function TechSkillsShowcase() {
     },
     {
       category: 'databases',
-      label: 'MySQL/PostgreSQL',
+      label: 'SQL',
       level: 'Advanced',
       proficiency: 85,
     },
@@ -101,12 +101,6 @@ export default function TechSkillsShowcase() {
       label: 'Oracle DB',
       level: 'Proficient',
       proficiency: 70,
-    },
-    {
-      category: 'ai',
-      label: 'Machine Learning (TensorFlow/Scikit-learn)',
-      level: 'Proficient',
-      proficiency: 75,
     },
     {
       category: 'ai',
@@ -131,13 +125,7 @@ export default function TechSkillsShowcase() {
       label: 'Predictive Defect Analysis',
       level: 'Advanced',
       proficiency: 80,
-    },
-    {
-      category: 'ai',
-      label: 'Natural Language Processing (NLP)',
-      level: 'Proficient',
-      proficiency: 70,
-    },
+    }
   ];
 
   const filteredSkills = activeCategory === 'all' 
@@ -186,13 +174,7 @@ export default function TechSkillsShowcase() {
                   {skill.level}
                 </span>
               </div>
-              <div className={styles.progressBar}>
-                <div 
-                  className={styles.progressFill}
-                  style={{ width: `${skill.proficiency}%` }}
-                />
-              </div>
-              <p className={styles.proficiency}>{skill.proficiency}% Proficiency</p>
+
             </div>
           ))}
         </div>
