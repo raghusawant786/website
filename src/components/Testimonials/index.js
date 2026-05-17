@@ -14,7 +14,7 @@ export default function Testimonials() {
       title: 'Senior QA Manager',
       company: 'SS&C Technologies',
       icon: '👩‍💼',
-      color: '#b982e0'
+      color: '#0f766e'
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ export default function Testimonials() {
       title: 'QA Director',
       company: 'Honeywell International',
       icon: '👨‍💼',
-      color: '#64c8c8'
+      color: '#14a39a'
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ export default function Testimonials() {
       title: 'VP Engineering',
       company: 'Qualitykiosk Technologies',
       icon: '👨‍💼',
-      color: '#ffa726'
+      color: '#d97706'
     }
   ];
 
@@ -79,14 +79,6 @@ export default function Testimonials() {
               </div>
             </article>
           ))}
-        </div>
-
-        <div className={styles.ctaBox}>
-          <h3>Ready to transform your QA strategy?</h3>
-          <p>Let's discuss how intelligent test automation can reduce your defects and delivery time.</p>
-          <a href="mailto:raghusawant786@gmail.com" className={styles.ctaButton}>
-            📧 Get in Touch
-          </a>
         </div>
       </div>
     </section>

@@ -6,11 +6,11 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import SocialLinks from '../components/Solidlinks/_SocialLinks';
 import ErrorBoundary from '@site/src/components/ErrorBoundary';
-import ProfessionalStats from '@site/src/components/ProfessionalStats';
 import ExperienceTimeline from '@site/src/components/ExperienceTimeline';
 import TechSkillsShowcase from '@site/src/components/TechSkillsShowcase';
 import ProjectShowcase from '@site/src/components/ProjectShowcase';
 import Testimonials from '@site/src/components/Testimonials';
+import ScrollProgress from '@site/src/components/ScrollProgress';
 
 /**
  * Homepage Header Component
@@ -81,12 +81,10 @@ export default function Home() {
       title={`${siteConfig.title} - Portfolio`}
       description="Raghunath Sawant - Lead QA Engineer | 9+ Years BFSI Domain | Full-Stack Testing | Team Leadership"
     >
+      <ScrollProgress />
       <HomepageHeader />
       
       <main>
-        <ErrorBoundary>
-          <ProfessionalStats />
-        </ErrorBoundary>
         <ErrorBoundary>
           <TechSkillsShowcase />
         </ErrorBoundary>

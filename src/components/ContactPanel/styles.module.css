@@ -1,0 +1,110 @@
+.contactPanel {
+  border: 1px solid #dbe4e7;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, #ecfeff 60%, #fffbeb 100%);
+  box-shadow: 0 14px 38px rgba(15, 118, 110, 0.12);
+}
+
+.contactHeader {
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  color: var(--brand-gold);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  margin: 0 0 0.5rem;
+}
+
+.title {
+  color: var(--brand-ink);
+  margin: 0;
+  font-size: 1.65rem;
+  line-height: 1.25;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  color: var(--brand-ink);
+  font-weight: 800;
+}
+
+.field input,
+.field textarea {
+  border: 2px solid #dbe4e7;
+  border-radius: 8px;
+  background: var(--brand-surface);
+  color: var(--brand-ink);
+  font: inherit;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--brand-teal);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+  outline: none;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.25rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  min-height: 44px;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-weight: 800;
+}
+
+.primaryAction {
+  display: inline-flex;
+  align-items: center;
+  background: var(--gradient-1);
+  color: white;
+}
+
+.secondaryAction {
+  border: 2px solid var(--brand-teal);
+  background: transparent;
+  color: var(--brand-teal);
+}
+
+@media (max-width: 768px) {
+  .contactPanel {
+    padding: 1.5rem;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+:global([data-theme='dark']) .contactPanel {
+  background: linear-gradient(135deg, #111827 0%, #123330 60%, #292014 100%);
+  border-color: #374151;
+}
+
+:global([data-theme='dark']) .field input,
+:global([data-theme='dark']) .field textarea {
+  border-color: #374151;
+}

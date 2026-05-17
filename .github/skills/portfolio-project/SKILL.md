@@ -18,6 +18,10 @@ Portfolio is a Docusaurus-based static site showcasing professional work, certif
 │   │   ├── TechSkillsShowcase/ # Skills grid with categories
 │   │   ├── Certification/     # Cert display
 │   │   ├── ExperienceTimeline/
+│   │   ├── ProjectShowcase/   # Interactive case-study cards with modal
+│   │   ├── ResumePreview/
+│   │   ├── ContactPanel/
+│   │   ├── ScrollProgress/
 │   │   └── [others]/
 │   ├── pages/                 # Page-level components
 │   │   ├── index.js          # Homepage
@@ -81,10 +85,21 @@ src/components/TechSkillsShowcase/
 
 #### Key Implementation Details
 - **Props**: None – all data from hardcoded `skills` array
-- **State**: `activeCategory` – filters skills by category
+- **State**: `activeCategory`, `activeLevel`, `searchTerm`
 - **Categories**: Testing, Automation, Languages, DevOps, Databases, AI/ML
+- **Interactive features**: search, category filters, level filters, result count, top-skill pills
 - **Removed CSS Classes**: `.progressBar`, `.progressFill`, `.proficiency`
 - **Active Classes**: `.skillCard`, `.skillHeader`, `.skillName`, `.skillLevel`, `.skillName`, `.categoryFilter`, `.filterBtn`, `.skillsGrid`, `.skillsTitle`, `.skillsSection`
+
+### Interactive Portfolio Components
+**Last Updated**: May 2026
+
+New homepage sections and interaction patterns:
+- `src/components/ProjectShowcase/` uses compact case-study cards and a modal for full details.
+- `src/components/ResumePreview/` displays resume highlights and PDF preview/download actions.
+- `src/components/ScrollProgress/` adds a fixed top scroll progress indicator.
+- `src/components/ContactPanel/` is imported in `docs/hireMe.mdx` and creates a mailto draft plus copy-email interaction.
+- `src/components/Certification/` supports search/category filtering and uses SVG certification logos from `static/img/certifications/`.
 
 ---
 

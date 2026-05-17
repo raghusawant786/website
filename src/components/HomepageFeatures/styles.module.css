@@ -53,11 +53,11 @@
 .feature:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transform: translateY(-8px);
-  border-color: #2e8555;
+  border-color: var(--brand-teal);
 }
 
 .feature:focus-within {
-  outline: 3px solid #2e8555;
+  outline: 3px solid var(--brand-teal);
   outline-offset: 2px;
 }
 
@@ -68,7 +68,7 @@
   width: 120px;
   height: 120px;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-1);
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -124,7 +124,7 @@
 
   .feature:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    border-color: #33925d;
+    border-color: var(--brand-teal-light);
   }
 
   .featureTitle {
@@ -231,4 +231,3 @@
     page-break-inside: avoid;
   }
 }
-

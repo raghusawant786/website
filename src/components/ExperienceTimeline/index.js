@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.css';
 
 /**
@@ -6,42 +6,50 @@ import styles from './styles.module.css';
  * Displays career progression visually
  */
 export default function ExperienceTimeline() {
+  const [openIndex, setOpenIndex] = useState(0);
+
   const experiences = [
     {
       company: 'SS&C Technologies',
       role: 'Lead Software QA Engineer',
       period: 'Oct 2024 – Present',
+      domain: 'BFSI compliance, IRS/DOL workflows, enterprise automation',
+      tools: ['Serenity BDD', 'Cucumber', 'Selenium', 'Rest Assured', 'Jenkins'],
       logo: '🏢',
       achievements: [
         'Lead QA team with 90% UI automation coverage',
         'Implemented BDD/Serenity architecture',
         'IRS/DOL compliance testing & automation',
       ],
-      color: '#b982e0',
+      color: '#0f766e',
     },
     {
       company: 'Honeywell International',
       role: 'Senior Quality Engineer',
       period: 'Apr 2023 – Oct 2024',
+      domain: 'Enterprise product quality, visual regression, automated delivery',
+      tools: ['Selenium', 'TestNG', 'Applitools', 'Java', 'GitHub'],
       logo: '🛠️',
       achievements: [
         '85%+ test coverage with TestNG/POM',
         '100+ daily tests execution',
         '60+ visual regressions detected & fixed',
       ],
-      color: '#64c8c8',
+      color: '#14a39a',
     },
     {
       company: 'Qualitykiosk Technologies',
       role: 'Quality Analyst | Senior QA',
       period: 'Aug 2016 – Apr 2023',
+      domain: 'Banking, mobile applications, web automation, API testing',
+      tools: ['Selenium', 'Appium', 'JMeter', 'SQL', 'JIRA'],
       logo: '📊',
       achievements: [
         '5+ years BFSI domain expertise',
         'Selenium, API testing, automation',
         'Team leadership & mentoring',
       ],
-      color: '#ffa726',
+      color: '#d97706',
     },
   ];
 
@@ -62,11 +70,30 @@ export default function ExperienceTimeline() {
                     <p className={styles.company}>{exp.company}</p>
                     <span className={styles.period}>{exp.period}</span>
                   </div>
-                  <ul className={styles.achievements}>
-                    {exp.achievements.map((achievement, aidx) => (
-                      <li key={aidx}>{achievement}</li>
-                    ))}
-                  </ul>
+                  <button
+                    type="button"
+                    className={styles.expandBtn}
+                    onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                    aria-expanded={openIndex === idx}
+                  >
+                    {openIndex === idx ? 'Hide role details' : 'View role details'}
+                  </button>
+
+                  {openIndex === idx && (
+                    <div className={styles.expandedPanel}>
+                      <p className={styles.domain}>{exp.domain}</p>
+                      <div className={styles.toolList}>
+                        {exp.tools.map(tool => (
+                          <span key={tool} className={styles.toolPill}>{tool}</span>
+                        ))}
+                      </div>
+                      <ul className={styles.achievements}>
+                        {exp.achievements.map((achievement, aidx) => (
+                          <li key={aidx}>{achievement}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

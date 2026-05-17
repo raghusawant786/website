@@ -13,6 +13,7 @@ const LazyImage = ({
   height = 'auto',
   className = '',
   onClick = null,
+  onError = null,
   title = '',
   placeholderBg = '#f0f0f0',
 }) => {
@@ -66,6 +67,7 @@ const LazyImage = ({
           alt={alt}
           loading="lazy"
           onLoad={handleImageLoad}
+          onError={onError}
           className={`${styles.image} ${isLoaded ? styles.loaded : styles.loading}`}
           style={{
             width: '100%',

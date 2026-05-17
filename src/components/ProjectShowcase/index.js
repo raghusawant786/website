@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 
 /**
@@ -7,6 +7,7 @@ import styles from './styles.module.css';
  */
 export default function ProjectShowcase() {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
     {
@@ -24,7 +25,7 @@ export default function ProjectShowcase() {
         'Saved 120+ QA hours/month'
       ],
       icon: '📱',
-      color: '#64c8c8',
+      color: '#0f766e',
       metrics: {
         coverage: '87%',
         execution: '4 hrs',
@@ -46,7 +47,7 @@ export default function ProjectShowcase() {
         '100+ daily automated API executions'
       ],
       icon: '🔌',
-      color: '#b982e0',
+      color: '#14a39a',
       metrics: {
         coverage: '95%',
         execution: '100+/day',
@@ -68,7 +69,7 @@ export default function ProjectShowcase() {
         'Zero visual regression escapes to production'
       ],
       icon: '🎨',
-      color: '#ffa726',
+      color: '#d97706',
       metrics: {
         bugs: '60+ caught',
         time_saved: '30 hrs/qtly',
@@ -90,7 +91,7 @@ export default function ProjectShowcase() {
         'Reduced defect escape rate by 35%'
       ],
       icon: '📋',
-      color: '#9f7aea',
+      color: '#0f766e',
       metrics: {
         coverage: '85%',
         defect_reduction: '35%',
@@ -104,7 +105,7 @@ export default function ProjectShowcase() {
       company: 'SS&C Technologies',
       challenge: 'Compliance reporting dashboard must handle 500k+ records, required performance validation under load.',
       solution: 'Conducted NeoLoad performance testing simulating 1000 concurrent users, identified bottlenecks, validated 95th percentile response times.',
-      technologies: ['NeoLoadNeLoad', 'JMeter', 'SQL Performance Tuning', 'Load Testing'],
+      technologies: ['NeoLoad', 'JMeter', 'SQL Performance Tuning', 'Load Testing'],
       impact: [
         'Validated system handles 2x production load',
         'Identified 3 critical bottlenecks before production',
@@ -112,7 +113,7 @@ export default function ProjectShowcase() {
         'SLA compliance: 99.8% uptime maintained'
       ],
       icon: '⚡',
-      color: '#ff7675',
+      color: '#14a39a',
       metrics: {
         load: '1000 users',
         optimization: '40%',
@@ -134,7 +135,7 @@ export default function ProjectShowcase() {
         'Proof-of-concept for AI-driven QA transformation'
       ],
       icon: '🤖',
-      color: '#5dade2',
+      color: '#d97706',
       metrics: {
         cases_generated: '150+',
         time_saved: '90%',
@@ -153,6 +154,21 @@ export default function ProjectShowcase() {
   const filteredProjects = activeFilter === 'all' 
     ? projects 
     : projects.filter(p => p.category === activeFilter);
+
+  const closeProject = () => setSelectedProject(null);
+
+  useEffect(() => {
+    if (!selectedProject) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeProject();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [selectedProject]);
 
   return (
     <section className={styles.showcaseSection}>
@@ -198,31 +214,17 @@ export default function ProjectShowcase() {
 
               <div className={styles.projectContent}>
                 <div className={styles.section}>
-                  <h4 className={styles.sectionTitle}>🎯 Challenge</h4>
-                  <p className={styles.sectionText}>{project.challenge}</p>
-                </div>
-
-                <div className={styles.section}>
-                  <h4 className={styles.sectionTitle}>🔧 Solution</h4>
+                  <h4 className={styles.sectionTitle}>Solution Snapshot</h4>
                   <p className={styles.sectionText}>{project.solution}</p>
                 </div>
 
                 <div className={styles.section}>
-                  <h4 className={styles.sectionTitle}>💻 Technologies</h4>
+                  <h4 className={styles.sectionTitle}>Tech Stack</h4>
                   <div className={styles.techTags}>
                     {project.technologies.map((tech, idx) => (
                       <span key={idx} className={styles.techTag}>{tech}</span>
                     ))}
                   </div>
-                </div>
-
-                <div className={styles.section}>
-                  <h4 className={styles.sectionTitle}>📊 Impact & Results</h4>
-                  <ul className={styles.impactList}>
-                    {project.impact.map((item, idx) => (
-                      <li key={idx} className={styles.impactItem}>✓ {item}</li>
-                    ))}
-                  </ul>
                 </div>
 
                 <div className={styles.metricsRow}>
@@ -235,18 +237,93 @@ export default function ProjectShowcase() {
                     </div>
                   ))}
                 </div>
+
+                <button
+                  type="button"
+                  className={styles.caseStudyBtn}
+                  onClick={() => setSelectedProject(project)}
+                  aria-label={`Open full case study for ${project.title}`}
+                >
+                  View case study
+                </button>
               </div>
             </article>
           ))}
         </div>
 
-        <div className={styles.ctaSection}>
-          <h3>Want to see more technical details?</h3>
-          <p>Check out my GitHub repositories with open-source test automation frameworks</p>
-          <a href="https://github.com/raghusawant786" className={styles.githubBtn} target="_blank" rel="noopener noreferrer">
-            🔗 View GitHub Projects
-          </a>
-        </div>
+        {selectedProject && (
+          <div
+            className={styles.modalOverlay}
+            role="presentation"
+            onClick={closeProject}
+          >
+            <article
+              className={styles.caseStudyModal}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="case-study-title"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <button
+                type="button"
+                className={styles.closeBtn}
+                onClick={closeProject}
+                aria-label="Close case study"
+              >
+                ×
+              </button>
+
+              <div className={styles.modalHeader}>
+                <div
+                  className={styles.projectIcon}
+                  style={{ backgroundColor: selectedProject.color }}
+                >
+                  {selectedProject.icon}
+                </div>
+                <div>
+                  <p className={styles.projectCompany}>{selectedProject.company}</p>
+                  <h3 id="case-study-title" className={styles.modalTitle}>
+                    {selectedProject.title}
+                  </h3>
+                </div>
+              </div>
+
+              <div className={styles.modalGrid}>
+                <section className={styles.modalPanel}>
+                  <h4 className={styles.sectionTitle}>Challenge</h4>
+                  <p className={styles.sectionText}>{selectedProject.challenge}</p>
+                </section>
+
+                <section className={styles.modalPanel}>
+                  <h4 className={styles.sectionTitle}>Solution</h4>
+                  <p className={styles.sectionText}>{selectedProject.solution}</p>
+                </section>
+              </div>
+
+              <section className={styles.modalPanel}>
+                <h4 className={styles.sectionTitle}>Impact & Results</h4>
+                <ul className={styles.impactList}>
+                  {selectedProject.impact.map((item, idx) => (
+                    <li key={idx} className={styles.impactItem}>✓ {item}</li>
+                  ))}
+                </ul>
+              </section>
+
+              <div className={styles.metricsRow}>
+                {Object.entries(selectedProject.metrics).map(([key, value]) => (
+                  <div key={key} className={styles.metricCard} style={{ borderTopColor: selectedProject.color }}>
+                    <div className={styles.metricValue}>{value}</div>
+                    <div className={styles.metricLabel}>
+                      {key.replace(/_/g, ' ')}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </article>
+          </div>
+        )}
+
+
       </div>
     </section>
   );

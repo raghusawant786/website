@@ -7,7 +7,7 @@
   align-items: flex-start;
   align-content: space-between;
   margin: 30px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: var(--gradient-soft);
   padding: 3rem 0;
   border-radius: 12px;
 }
@@ -18,10 +18,69 @@
   margin-bottom: 2rem;
   display: block;
   text-align: center;
-  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  background: linear-gradient(135deg, var(--brand-ink) 0%, var(--brand-teal) 58%, var(--brand-gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.certToolbar {
+  margin: 0 auto 2rem;
+  max-width: 860px;
+  text-align: center;
+}
+
+.searchLabel {
+  display: block;
+  color: var(--brand-ink);
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+  text-align: left;
+}
+
+.searchInput {
+  width: 100%;
+  border: 2px solid #dbe4e7;
+  border-radius: 8px;
+  background: var(--brand-surface);
+  color: var(--brand-ink);
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.searchInput:focus {
+  border-color: var(--brand-teal);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+  outline: none;
+}
+
+.certFilters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filterBtn {
+  border: 2px solid #dbe4e7;
+  background: var(--brand-surface);
+  color: var(--brand-ink-soft);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+  background: var(--brand-teal);
+  color: white;
+  border-color: var(--brand-teal);
+}
+
+.resultCount {
+  color: var(--brand-muted);
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
 }
 
 .Certification {
@@ -33,7 +92,7 @@
     'CertificationImage'
     'CertificationInfo'
     'CertificationOrganization';
-  border: 2px solid #e0e0e0;
+  border: 2px solid #dbe4e7;
   border-radius: 12px;
   margin: 15px;
   padding: 20px;
@@ -41,20 +100,20 @@
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   min-height: 300px;
-  background-color: #fff;
+  background-color: var(--brand-surface);
   flex: 0 1 calc(33.333% - 30px);
   max-width: calc(33.333% - 30px);
-  color: #17202a;
+  color: var(--brand-ink);
 }
 
 .Certification:hover {
-  box-shadow: 0px 12px 24px rgba(185, 130, 224, 0.15);
+  box-shadow: 0px 12px 24px rgba(15, 118, 110, 0.15);
   transform: translateY(-8px);
-  border-color: #b982e0;
+  border-color: var(--brand-teal);
 }
 
 .Certification:focus-within {
-  outline: 3px solid #b982e0;
+  outline: 3px solid var(--brand-teal);
   outline-offset: 2px;
 }
 
@@ -66,7 +125,7 @@
   width: 100%;
   height: 120px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(185, 130, 224, 0.05) 0%, rgba(100, 200, 200, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.06) 0%, rgba(217, 119, 6, 0.06) 100%);
   border-radius: 8px;
   border: 1px solid #e5e7eb;
 }
@@ -86,7 +145,7 @@
   width: 100%;
   height: 100%;
   gap: 8px;
-  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  background: var(--gradient-1);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -123,7 +182,7 @@
   font-size: 1.05rem;
   font-weight: 700;
   margin: 0;
-  color: #17202a;
+  color: var(--brand-ink);
   line-height: 1.4;
   word-wrap: break-word;
 }
@@ -131,10 +190,10 @@
 .CertificationDuration {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #7d8fa3;
+  color: var(--brand-muted);
   margin: 0;
   font-style: italic;
-  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -143,7 +202,7 @@
 .CertificationOrganization {
   grid-area: CertificationOrganization;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--brand-ink-soft);
   margin: 0;
   line-height: 1.4;
   padding-top: 8px;
@@ -153,7 +212,7 @@
 .noCertifications {
   text-align: center;
   font-size: 1rem;
-  color: #666;
+  color: var(--brand-ink-soft);
   padding: 2rem;
 }
 
@@ -170,17 +229,17 @@
   }
 
   .Certification:hover {
-    box-shadow: 0px 12px 24px rgba(185, 130, 224, 0.3);
-    border-color: #5dade2;
+    box-shadow: 0px 12px 24px rgba(45, 212, 191, 0.22);
+    border-color: var(--brand-teal-light);
   }
 
   .CertificationImage {
-    background: linear-gradient(135deg, rgba(185, 130, 224, 0.1) 0%, rgba(100, 200, 200, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.12) 0%, rgba(251, 191, 36, 0.1) 100%);
     border-color: #555;
   }
 
   .CertificationBadge {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-1);
   }
 
   .CertificationTitle {
@@ -288,4 +347,3 @@
     transform: none;
   }
 }
-

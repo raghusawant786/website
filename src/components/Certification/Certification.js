@@ -30,6 +30,16 @@ function getCertificationBadge(certName) {
   return '🏆';
 }
 
+function getCertificationCategory(certName) {
+  const name = certName.toLowerCase();
+
+  if (name.includes('aws') || name.includes('cloud')) return 'Cloud';
+  if (name.includes('jenkins') || name.includes('docker') || name.includes('git')) return 'DevOps';
+  if (name.includes('scrum') || name.includes('leadership') || name.includes('management')) return 'Agile & Leadership';
+  if (name.includes('selenium') || name.includes('appium') || name.includes('cucumber') || name.includes('rest')) return 'Automation';
+  return 'Testing';
+}
+
 /**
  * CertificationCard Component
  * Displays individual certification with lazy-loaded image or fallback badge
@@ -101,6 +111,20 @@ function CertificationCard({
  */
 export default function CertificationList() {
   const { certifications } = Data;
+  const [activeCategory, setActiveCategory] = React.useState('All');
+  const [searchTerm, setSearchTerm] = React.useState('');
+
+  const categoryOptions = ['All', 'Testing', 'Automation', 'DevOps', 'Cloud', 'Agile & Leadership'];
+  const normalizedSearch = searchTerm.trim().toLowerCase();
+  const filteredCertifications = (certifications || []).filter(certification => {
+    const category = getCertificationCategory(certification.name);
+    const categoryMatches = activeCategory === 'All' || category === activeCategory;
+    const searchMatches = !normalizedSearch
+      || certification.name.toLowerCase().includes(normalizedSearch)
+      || certification.organisation.toLowerCase().includes(normalizedSearch);
+
+    return categoryMatches && searchMatches;
+  });
 
   if (!certifications || certifications.length === 0) {
     return (
@@ -126,8 +150,39 @@ export default function CertificationList() {
         aria-label="Professional certifications"
       >
         <div className="container">
+          <div className={styles.certToolbar}>
+            <label className={styles.searchLabel} htmlFor="certification-search">
+              Search certifications
+            </label>
+            <input
+              id="certification-search"
+              type="search"
+              className={styles.searchInput}
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              placeholder="Search ISTQB, Selenium, AWS..."
+            />
+
+            <div className={styles.certFilters} aria-label="Filter certifications by category">
+              {categoryOptions.map(category => (
+                <button
+                  type="button"
+                  key={category}
+                  className={`${styles.filterBtn} ${activeCategory === category ? styles.active : ''}`}
+                  onClick={() => setActiveCategory(category)}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
+            <p className={styles.resultCount}>
+              Showing {filteredCertifications.length} of {certifications.length} certifications
+            </p>
+          </div>
+
           <div className="row">
-            {certifications.map((certification, idx) => (
+            {filteredCertifications.map((certification, idx) => (
               <CertificationCard
                 key={`cert-${idx}`}
                 {...certification}
@@ -135,12 +190,15 @@ export default function CertificationList() {
               />
             ))}
           </div>
+
+          {filteredCertifications.length === 0 && (
+            <p className={styles.noCertifications}>No certifications match the current filters.</p>
+          )}
         </div>
       </section>
     </ErrorBoundary>
   );
 }
-
 
 
 

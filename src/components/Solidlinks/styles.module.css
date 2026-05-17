@@ -30,8 +30,8 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: rgba(46, 133, 85, 0.1);
-  color: #17202a;
+  background-color: rgba(15, 118, 110, 0.1);
+  color: var(--brand-ink);
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 2px solid transparent;
@@ -39,38 +39,38 @@
 }
 
 .socialLinkAnchor:hover {
-  background-color: #2e8555;
+  background-color: var(--brand-teal);
   color: white;
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(46, 133, 85, 0.3);
+  box-shadow: 0 8px 16px rgba(15, 118, 110, 0.3);
 }
 
 .socialLinkAnchor:focus {
   outline: none;
-  border-color: #2e8555;
-  box-shadow: 0 0 0 3px rgba(46, 133, 85, 0.1);
+  border-color: var(--brand-teal);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
 }
 
 .socialLinkAnchor:active {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(46, 133, 85, 0.2);
+  box-shadow: 0 4px 8px rgba(15, 118, 110, 0.22);
 }
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   .socialLinkAnchor {
-    background-color: rgba(46, 133, 85, 0.2);
+    background-color: rgba(45, 212, 191, 0.14);
     color: #e0e0e0;
   }
 
   .socialLinkAnchor:hover {
-    background-color: #33925d;
-    box-shadow: 0 8px 16px rgba(51, 146, 93, 0.3);
+    background-color: var(--brand-teal);
+    box-shadow: 0 8px 16px rgba(45, 212, 191, 0.22);
   }
 
   .socialLinkAnchor:focus {
-    border-color: #33925d;
-    box-shadow: 0 0 0 3px rgba(51, 146, 93, 0.2);
+    border-color: var(--brand-teal-light);
+    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.18);
   }
 }
 
@@ -105,7 +105,7 @@
   }
 
   .socialLinkAnchor:focus {
-    outline: 3px solid #2e8555;
+    outline: 3px solid var(--brand-teal);
     outline-offset: 2px;
   }
 }

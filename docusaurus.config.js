@@ -11,8 +11,12 @@ const config = {
   url: 'https://raghunahtsawant.github.io', // Your website URL
   baseUrl: '/website/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/RS_logo.jpg',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   organizationName: 'raghusawant786', // Usually your GitHub org/user name.
   projectName: 'website', // Usually your repo name.
   themes: ['@docusaurus/theme-live-codeblock'],	
@@ -32,6 +36,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          onInlineAuthors: 'ignore',
           // Please change this to your repo.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -79,8 +84,8 @@ const config = {
           },
           {
             position: 'left',
-            to: '/Certifications',
-            label: 'Certifications'
+            to: '/interviewprepartion',
+            label: '📝 Interview Prep'
           },
           {to: '/blog', label: 'Blog', position: 'left'},
          // {to: '/games', label: 'Games', position: 'left'},

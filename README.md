@@ -33,7 +33,7 @@ Using SSH:
 $ USE_SSH=true yarn deploy
 ```
 
-Not using SSH:
+Not using SSH
 
 ```
 $ GIT_USER=<Your GitHub username> yarn deploy
@@ -42,3 +42,11 @@ cmd /C "set GIT_USER=raghusawant786&& yarn deploy"
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### Upgrade Dependencies
+
+To upgrade Docusaurus packages to the latest version, run:
+
+```
+$ yarn upgrade @docusaurus/core@latest @docusaurus/plugin-ideal-image@latest @docusaurus/preset-classic@latest @docusaurus/theme-live-codeblock@latest
+```

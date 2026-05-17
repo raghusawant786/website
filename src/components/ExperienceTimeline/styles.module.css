@@ -1,13 +1,13 @@
 .timelineSection {
   padding: 4rem 0;
-  background: #f8f9ff;
+  background: var(--brand-surface-soft);
 }
 
 .timelineTitle {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  background: linear-gradient(135deg, var(--brand-ink) 0%, var(--brand-teal) 58%, var(--brand-gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -25,7 +25,7 @@
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
-  background: linear-gradient(to bottom, #b982e0, #64c8c8, #ffa726);
+  background: linear-gradient(to bottom, var(--brand-teal), var(--brand-teal-light), var(--brand-gold));
   border-radius: 2px;
 }
 
@@ -47,7 +47,7 @@
   height: 60px;
   border: 4px solid;
   border-radius: 50%;
-  background: white;
+  background: var(--brand-surface);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +73,7 @@
 }
 
 .timelineCard {
-  background: white;
+  background: var(--brand-surface);
   padding: 2rem;
   border-radius: 12px;
   border-left: 4px solid;
@@ -93,13 +93,13 @@
 .role {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #17202a;
+  color: var(--brand-ink);
   margin-bottom: 0.25rem;
 }
 
 .company {
   font-size: 1.05rem;
-  color: #7d8fa3;
+  color: var(--brand-muted);
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
@@ -107,11 +107,56 @@
 .period {
   display: inline-block;
   font-size: 0.9rem;
-  color: #5a6c7d;
-  background: #f0f2f5;
+  color: var(--brand-ink-soft);
+  background: #ecfeff;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   font-weight: 500;
+}
+
+.expandBtn {
+  border: 2px solid var(--brand-teal);
+  background: transparent;
+  color: var(--brand-teal);
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.expandBtn:hover {
+  background: var(--brand-teal);
+  color: white;
+}
+
+.expandedPanel {
+  animation: expandIn 0.22s ease-out;
+}
+
+.domain {
+  color: var(--brand-ink-soft);
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.toolList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.toolPill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: #ecfeff;
+  color: var(--brand-teal);
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .achievements {
@@ -123,7 +168,7 @@
 .achievements li {
   padding: 0.6rem 0;
   font-size: 0.95rem;
-  color: #42464b;
+  color: var(--brand-ink-soft);
   position: relative;
   padding-left: 1.5rem;
   line-height: 1.6;
@@ -133,9 +178,20 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #64c8c8;
+  color: var(--brand-teal);
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+@keyframes expandIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 968px) {

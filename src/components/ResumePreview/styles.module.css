@@ -1,0 +1,119 @@
+.resumeSection {
+  background: var(--brand-surface);
+  padding: 4rem 0;
+}
+
+.resumeShell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid #dbe4e7;
+  border-radius: 12px;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #ecfeff 58%, #fffbeb 100%);
+  box-shadow: 0 14px 40px rgba(15, 118, 110, 0.12);
+}
+
+.eyebrow {
+  color: var(--brand-gold);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+}
+
+.title {
+  color: var(--brand-ink);
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.summary {
+  color: var(--brand-ink-soft);
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.primaryAction,
+.secondaryAction,
+.textAction {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 800;
+  padding: 0.75rem 1rem;
+}
+
+.primaryAction {
+  background: var(--gradient-1);
+  color: white;
+}
+
+.secondaryAction {
+  border: 2px solid var(--brand-teal);
+  color: var(--brand-teal);
+}
+
+.textAction {
+  color: var(--brand-ink);
+}
+
+.highlightPanel {
+  background: var(--brand-surface);
+  border: 1px solid #dbe4e7;
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.highlightItem {
+  display: flex;
+  gap: 0.75rem;
+  color: var(--brand-ink-soft);
+  font-weight: 700;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.highlightItem:last-child {
+  border-bottom: 0;
+}
+
+.check {
+  color: var(--brand-teal);
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .resumeShell {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.55rem;
+  }
+}
+
+:global([data-theme='dark']) .resumeShell {
+  background: linear-gradient(135deg, #111827 0%, #123330 58%, #292014 100%);
+  border-color: #374151;
+}
+
+:global([data-theme='dark']) .highlightPanel {
+  border-color: #374151;
+}
+
+:global([data-theme='dark']) .highlightItem {
+  border-color: #374151;
+}

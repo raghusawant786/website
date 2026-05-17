@@ -1,6 +1,6 @@
 .testimonialSection {
   padding: 4rem 0;
-  background: white;
+  background: var(--brand-surface);
 }
 
 .sectionHeader {
@@ -12,7 +12,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 1rem 0;
-  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  background: linear-gradient(135deg, var(--brand-ink) 0%, var(--brand-teal) 58%, var(--brand-gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -21,7 +21,7 @@
 
 .testimonialSubtitle {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--brand-ink-soft);
   margin: 0;
   max-width: 600px;
   margin: 0 auto;
@@ -35,9 +35,9 @@
 }
 
 .testimonialCard {
-  background: white;
+  background: var(--brand-surface);
   border-radius: 12px;
-  border-top: 4px solid #b982e0;
+  border-top: 4px solid var(--brand-teal);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
   position: relative;
@@ -47,7 +47,7 @@
 
 .testimonialCard:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(185, 130, 224, 0.15);
+  box-shadow: 0 12px 24px rgba(15, 118, 110, 0.15);
 }
 
 .testimonialCard::before {
@@ -57,7 +57,7 @@
   right: 0;
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle, rgba(185, 130, 224, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.12) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -71,11 +71,11 @@
 .quote {
   font-size: 1rem;
   font-style: italic;
-  color: #333;
+  color: var(--brand-ink-soft);
   margin: 1rem 0;
   padding: 0;
   line-height: 1.8;
-  border-left: 3px solid #b982e0;
+  border-left: 3px solid var(--brand-teal);
   padding-left: 1rem;
 }
 
@@ -109,20 +109,20 @@
 .authorName {
   font-size: 1rem;
   font-weight: 700;
-  color: #17202a;
+  color: var(--brand-ink);
   margin: 0;
 }
 
 .authorTitle {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #7d8fa3;
+  color: var(--brand-muted);
   margin: 0.2rem 0 0 0;
 }
 
 .authorCompany {
   font-size: 0.8rem;
-  color: #999;
+  color: var(--brand-muted);
   margin: 0.2rem 0 0 0;
 }
 
@@ -137,7 +137,7 @@
 }
 
 .ctaBox {
-  background: linear-gradient(135deg, #e0c9fa 0%, #c9f0f5 100%);
+  background: linear-gradient(135deg, #ecfeff 0%, #fffbeb 100%);
   border-radius: 12px;
   padding: 3rem 2rem;
   text-align: center;
@@ -146,12 +146,12 @@
 
 .ctaBox h3 {
   font-size: 1.5rem;
-  color: #17202a;
+  color: var(--brand-ink);
   margin: 0 0 0.5rem 0;
 }
 
 .ctaBox p {
-  color: #555;
+  color: var(--brand-ink-soft);
   margin: 0 0 1.5rem 0;
   font-size: 1.05rem;
 }
@@ -159,7 +159,7 @@
 .ctaButton {
   display: inline-block;
   padding: 0.8rem 1.8rem;
-  background: linear-gradient(135deg, #b982e0 0%, #64c8c8 100%);
+  background: var(--gradient-1);
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -169,7 +169,7 @@
 
 .ctaButton:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(185, 130, 224, 0.3);
+  box-shadow: 0 8px 16px rgba(15, 118, 110, 0.25);
 }
 
 /* Dark Mode Support */
@@ -192,7 +192,7 @@
   }
 
   .testimonialCard:hover {
-    box-shadow: 0 12px 24px rgba(185, 130, 224, 0.3);
+    box-shadow: 0 12px 24px rgba(45, 212, 191, 0.22);
   }
 
   .quote {
@@ -204,7 +204,7 @@
   }
 
   .ctaBox {
-    background: linear-gradient(135deg, rgba(185, 130, 224, 0.2) 0%, rgba(100, 200, 200, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.16) 0%, rgba(251, 191, 36, 0.14) 100%);
   }
 
   .ctaBox h3 {

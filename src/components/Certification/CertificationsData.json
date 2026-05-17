@@ -3,94 +3,93 @@
   "certifications": [
     {
       "name": "ISTQB Certified Tester - Foundation Level",
-      "image": "/img/certifications/istqb-foundation.png",
+      "image": "/img/certifications/istqb-foundation.svg",
       "organisation": "Issued By: International Software Testing Qualifications Board",
       "date": "Jan 2022"
     },
     {
       "name": "ISTQB Certified Tester - Advanced Level (Test Automation Engineer)",
-      "image": "/img/certifications/istqb-advanced.png",
+      "image": "/img/certifications/istqb-advanced.svg",
       "organisation": "Issued By: International Software Testing Qualifications Board",
       "date": "Dec 2022"
     },
     {
       "name": "Certified Scrum Master (CSM)",
-      "image": "/img/certifications/csm-logo.png",
+      "image": "/img/certifications/csm-logo.svg",
       "organisation": "Issued By: Scrum Alliance",
       "date": "Mar 2021"
     },
     {
       "name": "BDD & Cucumber Automation Specialist",
-      "image": "/img/certifications/cucumber-logo.png",
+      "image": "/img/certifications/cucumber-logo.svg",
       "organisation": "Issued By: SmartBear (Cucumber Official Partner)",
       "date": "Jul 2022"
     },
     {
       "name": "Selenium WebDriver Professional Certification",
-      "image": "/img/certifications/selenium-logo.png",
+      "image": "/img/certifications/selenium-logo.svg",
       "organisation": "Issued By: LambdaTest",
       "date": "May 2023"
     },
     {
       "name": "API Test Automation with REST Assured",
-      "image": "/img/certifications/rest-api-logo.png",
+      "image": "/img/certifications/rest-api-logo.svg",
       "organisation": "Issued By: Udemy",
       "date": "Feb 2022"
     },
     {
       "name": "Web Application Security Testing with OWASP ZAP",
-      "image": "/img/certifications/owasp-logo.png",
+      "image": "/img/certifications/owasp-logo.svg",
       "organisation": "Issued By: Coursera",
       "date": "Oct 2021"
     },
     {
       "name": "AWS Certified Cloud Practitioner",
-      "image": "/img/certifications/aws-logo.png",
+      "image": "/img/certifications/aws-logo.svg",
       "organisation": "Issued By: Amazon Web Services",
       "date": "Nov 2023"
     },
     {
       "name": "Git Complete: The Definitive Step-by-Step",
-      "image": "/img/certifications/git-logo.png",
+      "image": "/img/certifications/git-logo.svg",
       "organisation": "Issued By: Udemy",
       "date": "Aug 2020"
     },
     {
       "name": "Jenkins Essentials & Continuous Integration",
-      "image": "/img/certifications/jenkins-logo.png",
+      "image": "/img/certifications/jenkins-logo.svg",
       "organisation": "Issued By: Linux Foundation",
       "date": "Jun 2022"
     },
     {
       "name": "Performance Testing with Apache JMeter",
-      "image": "/img/certifications/jmeter-logo.png",
+      "image": "/img/certifications/jmeter-logo.svg",
       "organisation": "Issued By: Udemy",
       "date": "Apr 2023"
     },
     {
       "name": "Docker for Developers & QA Engineers",
-      "image": "/img/certifications/docker-logo.png",
+      "image": "/img/certifications/docker-logo.svg",
       "organisation": "Issued By: CloudAcademy",
       "date": "Sep 2022"
     },
     {
       "name": "Test Management with JIRA Advanced",
-      "image": "/img/certifications/jira-logo.png",
+      "image": "/img/certifications/jira-logo.svg",
       "organisation": "Issued By: Atlassian University",
       "date": "Mar 2021"
     },
     {
       "name": "Appium Mobile Test Automation Specialist",
-      "image": "/img/certifications/appium-logo.png",
+      "image": "/img/certifications/appium-logo.svg",
       "organisation": "Issued By: LambdaTest Academy",
       "date": "Jan 2023"
     },
     {
       "name": "Leadership & Team Management for QA Managers",
-      "image": "/img/certifications/leadership-logo.png",
+      "image": "/img/certifications/leadership-logo.svg",
       "organisation": "Issued By: NASSCOM (Confederation of Indian Industry)",
       "date": "Aug 2023"
     }
   ]
 }
-

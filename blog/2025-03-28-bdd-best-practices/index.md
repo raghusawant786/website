@@ -1,11 +1,7 @@
 ---
 slug: bdd-best-practices-qa-automation
 title: "BDD Best Practices: Building Test Automation That Business Understands"
-authors:
-  name: Raghunath Sawant
-  title: Lead QA Engineer
-  url: https://github.com/raghusawant786
-  image_url: /img/profile_img.jpeg
+authors: [raghu]
 tags: [BDD, Cucumber, Serenity, Test Automation, QA Best Practices]
 image: /img/bdd-hero.png
 hide_table_of_contents: false
