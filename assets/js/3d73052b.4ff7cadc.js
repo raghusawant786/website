@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[825],{8038(e){e.exports=JSON.parse('{"label":"Serenity","permalink":"/website/blog/tags/serenity","allTagsPath":"/website/blog/tags","count":1}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[472],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"BDD Best Practices: Building Test Automation That Business Understands","permalink":"/website/blog/bdd-best-practices-qa-automation"},{"title":"Welcome","permalink":"/website/blog/welcome"}]}')}}]);
