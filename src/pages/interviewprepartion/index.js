@@ -3,10 +3,16 @@ import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import { interviewTopics, topicKeys } from '../../data/interviewTopicsStructure';
 import { restAssuredSections } from '../../data/restAssuredContent';
+import { javaSections } from '../../data/javaContent';
+import { cucumberSerenitySections } from '../../data/cucumberSerenityContent';
+import { playwrightSections } from '../../data/playwrightContent';
 
 // Map main topics to their content data
 const contentMap = {
   restassured: restAssuredSections,
+  java: javaSections,
+  cucumber: cucumberSerenitySections,
+  playwright: playwrightSections,
 };
 
 export default function InterviewPreparation() {
@@ -51,13 +57,19 @@ export default function InterviewPreparation() {
     return text.replace(/[&<>"']/g, m => map[m]);
   };
 
-  const markdownToHtml = (markdown) => {
+  const markdownToHtml = (markdown, options = {}) => {
     let html = markdown;
 
+    if (options.hideCombinedJavaExamples) {
+      html = html.replace(/\n### Java Code Examples\n\n```[\s\S]*?```\n?/g, '\n');
+      html = html.replace(/\n\*\*Programs Covered:\*\*[\s\S]*?(?=\n\*\*Key Concepts:\*\*)/g, '\n');
+    }
+
     // ■■■ PROCESS CODE BLOCKS FIRST (preserve formatting) ■■■
-    html = html.replace(/```(.*?)```/gs, (match, code) => {
+    html = html.replace(/```(\w+)?\n?([\s\S]*?)```/g, (match, language, code) => {
+      const languageClass = language ? ` class="language-${language}"` : '';
       const escapedCode = escapeHtml(code.trim());
-      return `<pre><code>${escapedCode}</code></pre>`;
+      return `<pre><code${languageClass}>${escapedCode}</code></pre>`;
     });
 
     // ■■■ PROCESS INLINE CODE ■■■
@@ -108,7 +120,7 @@ export default function InterviewPreparation() {
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
       .replace(/^\- (.*?)$/gm, '<li>$1</li>')
-      .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+      .replace(/((?:<li>.*?<\/li>\n?)+)/g, '<ul>$1</ul>');
 
     // ■■■ WRAP PARAGRAPHS ■■■
     const parts = html.split(/(<h3>|<h4>|<table>|<pre>|<ul>)/);
@@ -130,6 +142,26 @@ export default function InterviewPreparation() {
     return result;
   };
 
+  const renderProgramExamples = (examples = []) => {
+    if (!examples.length) {
+      return null;
+    }
+
+    return (
+      <section className={styles.programExamples}>
+        <h3>Programs Covered</h3>
+        {examples.map((example) => (
+          <article className={styles.programExample} key={example.title}>
+            <h4>{example.title}</h4>
+            <pre>
+              <code className="language-java">{example.code.trim()}</code>
+            </pre>
+          </article>
+        ))}
+      </section>
+    );
+  };
+
   return (
     <Layout
       title="Interview Preparation"
@@ -146,6 +178,22 @@ export default function InterviewPreparation() {
         <div className={styles.layoutContainer}>
           {/* LEFT SIDEBAR - MAIN TOPICS + SUBTOPICS */}
           <aside className={styles.sidebar}>
+            {/* MAIN TOPICS - Switch between REST Assured, Java, etc. */}
+            <nav className={styles.mainTopicsNav}>
+              {topicKeys.map((topicKey) => (
+                <button
+                  key={topicKey}
+                  className={`${styles.mainTopic} ${
+                    selectedTopic === topicKey ? styles.mainTopicActive : ''
+                  }`}
+                  onClick={() => handleTopicChange(topicKey)}
+                >
+                  <span className={styles.topicIcon}>{interviewTopics[topicKey].icon}</span>
+                  <span>{interviewTopics[topicKey].title}</span>
+                </button>
+              ))}
+            </nav>
+
             {/* SUBTOPICS */}
             {topicData && (
               <div className={styles.subtopicSection}>
@@ -192,9 +240,13 @@ export default function InterviewPreparation() {
                 <div
                   className={styles.contentBody}
                   dangerouslySetInnerHTML={{
-                    __html: markdownToHtml(currentSection.content),
+                    __html: markdownToHtml(currentSection.content, {
+                      hideCombinedJavaExamples: Boolean(currentSection.examples),
+                    }),
                   }}
                 />
+
+                {renderProgramExamples(currentSection.examples)}
               </article>
             )}
           </main>
