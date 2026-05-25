@@ -6,6 +6,7 @@ import { restAssuredSections } from '../../data/restAssuredContent';
 import { javaSections } from '../../data/javaContent';
 import { cucumberSerenitySections } from '../../data/cucumberSerenityContent';
 import { playwrightSections } from '../../data/playwrightContent';
+import { seleniumSections } from '../../data/seleniumContent';
 
 // Map main topics to their content data
 const contentMap = {
@@ -13,6 +14,7 @@ const contentMap = {
   java: javaSections,
   cucumber: cucumberSerenitySections,
   playwright: playwrightSections,
+  selenium: seleniumSections,
 };
 
 export default function InterviewPreparation() {
@@ -28,6 +30,11 @@ export default function InterviewPreparation() {
     setSelectedTopic(topicKey);
     // Reset to first subtopic
     setSelectedSubtopic(interviewTopics[topicKey].subtopics[0].id);
+    // Auto-expand the topic's subtopics dropdown
+    setExpandedTopics(prev => ({
+      ...prev,
+      [topicKey]: true
+    }));
   };
 
   const handleSubtopicChange = (subtopicId) => {

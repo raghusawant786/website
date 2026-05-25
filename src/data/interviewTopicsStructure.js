@@ -69,6 +69,26 @@ export const interviewTopics = {
       { id: 'best-practices', label: 'Expert Tips & Best Practices' },
     ],
   },
+  selenium: {
+    title: 'Selenium WebDriver',
+    icon: '🔍',
+    subtopics: [
+      { id: 'architecture-webdriver', label: 'Selenium Architecture' },
+      { id: 'locators-advanced', label: 'Locators: Advanced Strategies' },
+      { id: 'waits-synchronization', label: 'Waits & Synchronization' },
+      { id: 'frames-alerts-windows', label: 'Frames, Alerts, Windows, Tabs' },
+      { id: 'actions-javascript', label: 'Actions Class & JavaScriptExecutor' },
+      { id: 'dropdowns-file-operations', label: 'Dropdowns, File Upload/Download' },
+      { id: 'dynamic-elements-stale', label: 'Dynamic Elements & StaleElementReferenceException' },
+      { id: 'exception-handling', label: 'Exception Handling Strategies' },
+      { id: 'selenium-grid-parallel', label: 'Selenium Grid 4, Parallel Execution & Infrastructure' },
+      { id: 'design-patterns', label: 'Design Patterns in Automation' },
+      { id: 'reporting-listeners-cicd', label: 'Reporting, Listeners, CI/CD' },
+      { id: 'advanced-topics', label: 'Advanced Topics' },
+      { id: 'debugging-scenarios', label: 'Real-Time Debugging Scenarios' },
+      { id: 'senior-interview-qa', label: 'Frequently Asked Senior SDET Interview Q&A' },
+    ],
+  },
   // Future topics can be added here
   // testng: {
   //   title: 'TestNG',

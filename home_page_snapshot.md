@@ -33,7 +33,7 @@
           - heading "Raghunath Sawant" [level=1] [ref=e31]
           - paragraph [ref=e32]: Lead QA Engineer | 9+ Years BFSI | BDD/Serenity | Full-Stack Testing | AI-Powered Quality
           - generic [ref=e33]:
-            - link "Navigate to hire me section" [ref=e34] [cursor=pointer]:
+            - link "Navigate to let's connect section" [ref=e34] [cursor=pointer]:
               - /url: /website/docs/hireMe
               - text: 💼 Available for Opportunities
             - link "Download resume" [ref=e35] [cursor=pointer]:

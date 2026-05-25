@@ -36,7 +36,7 @@ function HomepageHeader() {
             <Link
               className={clsx('button button--lg', styles.primaryBtn)}
               to="/docs/hireMe"
-              aria-label="Navigate to hire me section"
+              aria-label="Navigate to let's connect section"
             >
               💼 Available for Opportunities
             </Link>

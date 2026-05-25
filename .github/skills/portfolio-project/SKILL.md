@@ -137,7 +137,7 @@ Generated class names follow Docusaurus format: `[classNameInModule]_src-compone
 | Education | `docs/educationdetails.mdx` | `/website/docs/educationdetails` |
 | Technical Skills | `docs/technicalSkills.mdx` | `/website/docs/technicalSkills` |
 | Work Experience | `docs/workExperience.mdx` | `/website/docs/workExperience` |
-| Hire Me | `docs/hireMe.mdx` | `/website/docs/hireMe` |
+| let's connect | `docs/hireMe.mdx` | `/website/docs/hireMe` |
 | Certifications | `src/pages/Certifications/` | `/website/Certifications` |
 | Blog | `blog/` (subdirs) | `/website/blog` |
 
